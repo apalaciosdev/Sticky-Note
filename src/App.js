@@ -12,71 +12,42 @@ const App = () => {
   return (
     <div>
 
-    <Stage
-      width={window.innerWidth}
-      height={window.innerHeight}
-      onClick={(e) => {
-        if (e.currentTarget._id === e.target._id) {
-          setSelected(false);
-        }
-      }}
-    >
-      <Layer>
-        <StickyNote
-          x={50}
-          y={50}
-          text={text}
-          colour="#FFDAE1"
-          onTextChange={(value) => setText(value)}
-          width={width}
-          height={height}
-          selected={selected}
-          onTextResize={(newWidth, newHeight) => {
-            setWidth(newWidth);
-            setHeight(newHeight);
-          }}
-          onClick={() => {
-            setSelected(!selected);
-          }}
-          onTextClick={(newSelected) => {
-            setSelected(newSelected);
-          }}
-        />
-      </Layer>
-    </Stage>
-
- 
-      <Layer>
-        <StickyNote
-          x={50}
-          y={50}
-          text={text}
-          colour="#FFDAE1"
-          onTextChange={(value) => setText(value)}
-          width={width}
-          height={height}
-          selected={selected}
-          onTextResize={(newWidth, newHeight) => {
-            setWidth(newWidth);
-            setHeight(newHeight);
-          }}
-          onClick={() => {
-            setSelected(!selected);
-          }}
-          onTextClick={(newSelected) => {
-            setSelected(newSelected);
-          }}
-        />
-      </Layer>
+      <Stage
+        width={window.innerWidth}
+        height={window.innerHeight}
+        onClick={(e) => {
+          if (e.currentTarget._id === e.target._id) {
+            setSelected(false);
+          }
+        }}
+      >
+        <Layer>
+          <StickyNote
+            x={50}
+            y={50}
+            text={text}
+            colour="#FFDAE1"
+            onTextChange={(value) => setText(value)}
+            width={width}
+            height={height}
+            selected={selected}
+            onTextResize={(newWidth, newHeight) => {
+              setWidth(newWidth);
+              setHeight(newHeight);
+            }}
+            onClick={() => {
+              setSelected(!selected);
+            }}
+            onTextClick={(newSelected) => {
+              setSelected(newSelected);
+            }}
+          />
+        </Layer>
+      </Stage>
 
     </div>
-
-    
-    
   );
 };
-
-
 
 
 export default App;
